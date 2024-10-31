@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>102516</IntrospectionStateNumber>
+      <IntrospectionStateNumber>102546</IntrospectionStateNumber>
       <ServerVersion>14.13</ServerVersion>
-      <StartupTime>1730287682</StartupTime>
+      <StartupTime>1730373470</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1413,7 +1413,7 @@ true posixrules
 13429||10|C|G
 13429||-9223372036854775808|U|G
 13429||10|U|G</Grants>
-      <IntrospectionStateNumber>102516</IntrospectionStateNumber>
+      <IntrospectionStateNumber>102546</IntrospectionStateNumber>
       <ObjectId>29397</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4838,37 +4838,37 @@ true posixrules
     <schema id="264" parent="5" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>102516</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-30.17:31:25</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>102546</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-31.16:26:14</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <sequence id="265" parent="264" name="posts_id_seq">
-      <ObjectId>29398</ObjectId>
+      <ObjectId>29436</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>102494</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="264" name="users_id_seq">
-      <ObjectId>29410</ObjectId>
+      <ObjectId>29423</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="267" parent="264" name="posts">
-      <ObjectId>29399</ObjectId>
-      <StateNumber>102494</StateNumber>
+      <ObjectId>29437</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="268" parent="264" name="users">
-      <ObjectId>29411</ObjectId>
-      <StateNumber>102511</StateNumber>
+      <ObjectId>29424</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4876,138 +4876,158 @@ true posixrules
       <DefaultExpression>nextval(&apos;posts_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>102494</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>29398</SequenceId>
+      <SequenceId>29436</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="270" parent="267" name="name">
       <Position>2</Position>
-      <StateNumber>102494</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="271" parent="267" name="clas">
       <Position>3</Position>
-      <StateNumber>102494</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="272" parent="267" name="posts_pkey">
+    <column id="272" parent="267" name="user_id">
+      <Position>4</Position>
+      <StateNumber>102542</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="273" parent="267" name="posts_user_id_fkey">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>29445</ObjectId>
+      <StateNumber>102542</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>29424</RefTableId>
+    </foreign-key>
+    <index id="274" parent="267" name="posts_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>29405</ObjectId>
+      <ObjectId>29443</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>102494</StateNumber>
+      <StateNumber>102542</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="273" parent="267" name="ix_posts_id">
+    <index id="275" parent="267" name="ix_posts_id">
       <ColNames>id</ColNames>
-      <ObjectId>29409</ObjectId>
-      <StateNumber>102494</StateNumber>
+      <ObjectId>29453</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="274" parent="267" name="ix_posts_name">
+    <index id="276" parent="267" name="ix_posts_name">
       <ColNames>name</ColNames>
-      <ObjectId>29407</ObjectId>
-      <StateNumber>102494</StateNumber>
+      <ObjectId>29451</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="275" parent="267" name="ix_posts_clas">
+    <index id="277" parent="267" name="ix_posts_clas">
       <ColNames>clas</ColNames>
-      <ObjectId>29408</ObjectId>
-      <StateNumber>102494</StateNumber>
+      <ObjectId>29452</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="276" parent="267" name="posts_pkey">
+    <index id="278" parent="267" name="ix_posts_user_id">
+      <ColNames>user_id</ColNames>
+      <ObjectId>29450</ObjectId>
+      <StateNumber>102542</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="279" parent="267" name="posts_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>29406</ObjectId>
+      <ObjectId>29444</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>102494</StateNumber>
-      <UnderlyingIndexId>29405</UnderlyingIndexId>
+      <StateNumber>102542</StateNumber>
+      <UnderlyingIndexId>29443</UnderlyingIndexId>
     </key>
-    <column id="277" parent="268" name="id">
+    <column id="280" parent="268" name="id">
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>29410</SequenceId>
+      <SequenceId>29423</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="278" parent="268" name="name">
+    <column id="281" parent="268" name="name">
       <Position>2</Position>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="268" name="email">
+    <column id="282" parent="268" name="email">
       <Position>3</Position>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="280" parent="268" name="password">
+    <column id="283" parent="268" name="password">
       <Position>4</Position>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <StoredType>varchar|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="281" parent="268" name="users_pkey">
+    <index id="284" parent="268" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>29417</ObjectId>
+      <ObjectId>29430</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>102511</StateNumber>
+      <StateNumber>102542</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="282" parent="268" name="ix_users_id">
+    <index id="285" parent="268" name="ix_users_id">
       <ColNames>id</ColNames>
-      <ObjectId>29419</ObjectId>
-      <StateNumber>102511</StateNumber>
+      <ObjectId>29433</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="283" parent="268" name="ix_users_name">
+    <index id="286" parent="268" name="ix_users_name">
       <ColNames>name</ColNames>
-      <ObjectId>29422</ObjectId>
-      <StateNumber>102511</StateNumber>
+      <ObjectId>29432</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="284" parent="268" name="ix_users_email">
+    <index id="287" parent="268" name="ix_users_email">
       <ColNames>email</ColNames>
-      <ObjectId>29420</ObjectId>
-      <StateNumber>102511</StateNumber>
+      <ObjectId>29435</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="285" parent="268" name="ix_users_password">
+    <index id="288" parent="268" name="ix_users_password">
       <ColNames>password</ColNames>
-      <ObjectId>29421</ObjectId>
-      <StateNumber>102511</StateNumber>
+      <ObjectId>29434</ObjectId>
+      <StateNumber>102542</StateNumber>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="286" parent="268" name="users_pkey">
+    <key id="289" parent="268" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>29418</ObjectId>
+      <ObjectId>29431</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>102511</StateNumber>
-      <UnderlyingIndexId>29417</UnderlyingIndexId>
+      <StateNumber>102542</StateNumber>
+      <UnderlyingIndexId>29430</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

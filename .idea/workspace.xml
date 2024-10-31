@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aa4f58d-2e53-402a-824d-bb366c8c0afb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/crud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/maain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/527f359d-197e-4845-ad6d-9f08d7088e0c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/527f359d-197e-4845-ad6d-9f08d7088e0c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/527f359d-197e-4845-ad6d-9f08d7088e0c/storage_v2/_src_/database/testlogic.DLZdug/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/527f359d-197e-4845-ad6d-9f08d7088e0c/storage_v2/_src_/database/testlogic.DLZdug/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +32,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Debug",
-    "Python.schema.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.schema.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,7 +72,10 @@
       <workItem from="1730142713098" duration="464000" />
       <workItem from="1730201768123" duration="11329000" />
       <workItem from="1730224407733" duration="1935000" />
-      <workItem from="1730288411175" duration="17823000" />
+      <workItem from="1730288411175" duration="18767000" />
+      <workItem from="1730374172405" duration="5382000" />
+      <workItem from="1730385805789" duration="10896000" />
+      <workItem from="1730397953124" duration="7771000" />
     </task>
     <servers />
   </component>

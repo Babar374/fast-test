@@ -8,11 +8,12 @@
 # schema.py
 from pydantic import BaseModel
 from sqlalchemy.testing.pickleable import User
-
+from typing import Optional
 
 class PostCreate(BaseModel):
     name: str
     clas: str
+    user_id: int
 
     class Config:
         from_attributes = True
@@ -36,3 +37,17 @@ class usershow(BaseModel):
     class Config:
         # orm_mode= True
         from_attributes: bool = True
+
+
+class login(BaseModel):
+    username: str
+    password: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    username: Optional[str]=None
